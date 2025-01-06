@@ -75,7 +75,7 @@
 <body>
     <?php
     // Inisialisasi subtotal (dapat diambil dari data belanja)
-    $subtotal = ;
+    $subtotal += $row["subtotal"]; ;
     ?>
 
     <div class="payment-section">
