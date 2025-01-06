@@ -74,6 +74,14 @@
 </head>
 <body>
     <?php
+ $total_price = 0;
+
+    // Query untuk mendapatkan detail transaksi
+    $q = "SELECT dt.*, m.nama 
+          FROM detail_transaksi dt 
+          INNER JOIN menu m ON (m.id = dt.idmenu) 
+          WHERE dt.idtransaksi = '".$idtr."'";
+    $res = mysqli_query($conn, $q);
     // Inisialisasi subtotal (dapat diambil dari data belanja)
     $subtotal += $row["subtotal"]; ;
     ?>
